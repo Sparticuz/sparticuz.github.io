@@ -2,3 +2,4 @@ name: Kyle McNally
 markdown: redcarpet
 pygments: true
 timezone: America/New_York
+lsi: true
