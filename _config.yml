@@ -3,3 +3,6 @@ markdown: redcarpet
 pygments: true
 timezone: America/New_York
 lsi: true
+url: http://www.kmcnally.net
+author: Kyle McNally
+email: kyle@kmcnally.net
