@@ -7,3 +7,5 @@ url: http://www.kmcnally.net
 author: Kyle McNally
 email: kyle@kmcnally.net
 permalink: pretty
+redcarpet:
+ extensions: ['tables','autolink']
