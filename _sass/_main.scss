@@ -3,6 +3,63 @@
 /* Common
 /*
 /*****************************************************************************/
+html {
+	overflow-y: scroll;
+}
+
+.site {
+	text-align: justify;
+	@include outer-container;
+	line-height: 1.5em;
+}
+
+header {
+
+	margin-bottom: 2em;
+
+	a {
+		font-weight: bold;
+		text-decoration: none;
+	}
+
+	h1.title {
+		display: inline-block;
+		font-family: $header-font;
+
+		a {
+			color: #a00;
+			&:hover{
+				color: #000;
+			}
+		}
+		
+	}
+
+	nav{
+		display: inline;
+	
+		ul {
+			display: inline;
+			-webkit-padding-start: 0;
+
+			li {
+				display: inline;
+			
+				.extra {
+					color: #aaa;
+					margin-left: 1em;
+					&:hover{
+						color: #000;
+					}
+				}
+
+			}
+
+		}
+	}
+}
+
+
 
 
 /*****************************************************************************/
@@ -11,18 +68,18 @@
 /*
 /*****************************************************************************/
 ul.posts {
-  list-style-type: none;
-  margin-bottom: 2em;
+	list-style-type: none;
+	margin-bottom: 2em;
 }
 
 ul.posts li {
-  line-height: 1.75em;
+	line-height: 1.75em;
 }
 
 ul.posts span {
-  color: #aaa;
-  font-family: Monaco, "Courier New", monospace;
-  font-size: 80%;
+	color: #aaa;
+	font-family: Monaco, "Courier New", monospace;
+	font-size: 80%;
 }
 
 /*****************************************************************************/
@@ -31,71 +88,56 @@ ul.posts span {
 /*
 /*****************************************************************************/
 
-.site {
-  font-size: 115%;
-  text-align: justify;
-  width: 42em;
-  margin: 3em auto 2em;
-  line-height: 1.5em;
-}
-
-.site .header a {
-  font-weight: bold;
-  text-decoration: none;
-}
-
-.site .header h1.title {
-  display: inline-block;
-  margin-bottom: 2em;
-}
-
-.site .header h1.title a {
-  color: #a00;
-}
-
-.site .header h1.title a:hover {
-  color: #000;
-}
-
-.site .header a.extra {
-  color: #aaa;
-  margin-left: 1em;
-}
-
-.site .header a.extra:hover {
-  color: #000;
-}
-
 .site .meta {
-  color: #aaa;
+	color: #aaa;
 }
 
-.site .footer {
-  font-size: 80%;
-  color: #666;
-  border-top: 4px solid #eee;
-  margin-top: 2em;
-  overflow: hidden;
+footer {
+	font-size: 80%;
+	color: #666;
+	border-top: 4px solid #eee;
+	margin-top: 2em;
+	overflow: hidden;
+
+	.contact {
+		float: left;
+		margin-right: 3em;
+	}
+
+	.contact a {
+		color: #8085C1;
+	}
+
+	.services {
+		margin-top: 1.1em;
+		margin-right: -.2em;
+		float: right;
+
+		ul {
+			display: inline;
+			-webkit-padding-start: 0;
+
+			li {
+				display: inline;
+
+				img{
+					height: 20px;
+					width: 20px;
+					margin-right: 3px;
+				}
+			}
+		}
+
+		img {
+			border: 0;
+		}
+	}
 }
 
-.site .footer .contact {
-  float: left;
-  margin-right: 3em;
-}
 
-.site .footer .contact a {
-  color: #8085C1;
-}
 
-.site .footer .rss {
-  margin-top: 1.1em;
-  margin-right: -.2em;
-  float: right;
-}
 
-.site .footer .rss img {
-  border: 0;
-}
+
 
 /*****************************************************************************/
 /*
@@ -104,33 +146,69 @@ ul.posts span {
 /*****************************************************************************/
 
 /* standard */
-.post pre {
-  border: 1px solid #ddd;
-  background-color: #eef;
-  padding: 0 .4em;
-}
+.post {
 
-.post ul, .post ol {
-  margin-left: 1.35em;
-}
+	table{
+		@include fill-parent;
+		font-size: 14px;
+		border-collapse:collapse;
+		margin:20px 0 0;
+		padding:0;
+		tr {
+			border-top:1px solid #ccc;
+			background-color:#fff;
+			margin:0;
+			padding:0;
+			&:nth-child(2n) {
+				background-color:#f8f8f8;
+			}
 
-.post code {
-  border: 1px solid #ddd;
-  background-color: #eef;
-  padding: 0 .2em;
-}
+			th[align="center"], table tr td[align="center"] {
+				text-align:center;
+			}
 
-.post pre code {
-  border: none;
-}
+			th, td {
+				border:1px solid #ccc;
+				text-align:left;
+				margin:0;
+				padding:6px 13px;
+			}
+		}
+	}
+	
+	pre {
+		border: 1px solid #ddd;
+		background-color: #eef;
+		padding: 0 .4em;
+		
+		code {
+			border: none;
+		}
+	}
 
-/* terminal */
-.post pre.terminal {
-  border: 1px solid #000;
-  background-color: #333;
-  color: #FFF;
-}
+	ul, ol {
+		margin-left: 1.35em;
+	}
 
-.post pre.terminal code {
-  background-color: #333;
+	code {
+		border: 1px solid #ddd;
+		background-color: #eef;
+		padding: 0 .2em;
+	}
+
+	/* terminal */
+	pre.terminal {
+		border: 1px solid #000;
+		background-color: #333;
+		color: #FFF;
+
+		code {
+			background-color: #333;
+		}
+	}
+
+	img{
+		//@include fill-parent;
+	}
+
 }
