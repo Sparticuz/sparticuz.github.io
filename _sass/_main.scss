@@ -124,6 +124,14 @@ footer {
 					height: 20px;
 					width: 20px;
 					margin-right: 3px;
+
+					-webkit-filter: grayscale(1);
+					@include prefixer(filter,grayscale(100%),webkit moz ms o spec);
+
+					&:hover{
+						@include prefixer(filter,grayscale(0),webkit moz ms o spec);
+					}
+
 				}
 			}
 		}
