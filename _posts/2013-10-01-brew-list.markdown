@@ -4,11 +4,13 @@ title: "My Brew List"
 category: blog
 author: Kyle McNally
 permalink: /blog/brew-list.html
-date: 2013-10-02
+date: 2013-11-27
 ---
 
 Here is a list of recipies I've brewed. (Newest brew at the top)
 
+1. Hard Apple Cider - Brewed 11/27/2013, Blog - coming soon.
+1. [Smashing Pumpkin](http://www.northernbrewer.com/shop/smashing-pumpkin-ale-all-grain-kit.html) - Brewed 11/16/2013
 1. [Smashing Pumpkin](http://www.northernbrewer.com/shop/smashing-pumpkin-ale-all-grain-kit.html) - Brewed 09/26/2013, [Pictures](https://secure.flickr.com/photos/sparticuz/tags/smashingpumpkinale), Blog - coming soon.
 1. [Grapefruit Honey](http://brooklynbrewshop.com/1-gallon-beer-mixes/grapefruit-honey-ale-mix)  
    Some nice tones of grapefruit and honey. I had to let it condition in the bottle for a while, at least 4 weeks.
