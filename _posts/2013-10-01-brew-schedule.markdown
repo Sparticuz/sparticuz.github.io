@@ -1,11 +1,13 @@
 ---
 layout: post
-title: "My Brew List"
+title: "My Brew Schedule"
 category: blog
 author: Kyle McNally
 permalink: /blog/brew-list.html
-date: 2013-11-27
+date: 2013-12-14
 ---
+
+<iframe src="https://www.google.com/calendar/embed?showPrint=0&amp;showTabs=0&amp;showCalendars=0&amp;showTz=0&amp;height=600&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=kmcnally.net_nbp6uuvduopq7fib4e3nnjgjd4%40group.calendar.google.com&amp;color=%236B3304&amp;ctz=America%2FNew_York" style=" border-width:0 " width="800" height="600" frameborder="0" scrolling="no"></iframe>
 
 Here is a list of recipies I've brewed. (Newest brew at the top)
 
