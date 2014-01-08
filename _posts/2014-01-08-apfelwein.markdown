@@ -27,14 +27,15 @@ I brewed up some one gallon jugs of Apfelwein (Apple Wine) last night, using the
 [![Equipment](https://farm8.staticflickr.com/7387/11840060904_2f8808f3b7_z.jpg)](https://secure.flickr.com/photos/sparticuz/11840060904/)
 
 **Steps**
- 1. Add half a jug of Apple juice to the carboy.
- 1. Add half a pound of dextrose to the jug and shake until dissolved.
- 1. Pour into carboy, then add another jug until just below 1 gallon of juice.
- 1. Measure original gravity.
- 1. Add more dextrose until you hit desired original gravity.
- 1. Add pectic acid and yeast nutrient, then shake until dissolved.
- 1. Top off your gallon with the rest of the juice.
- 1. Add half packet of yeast.
+
+1. Add half a jug of Apple juice to the carboy.
+1. Add half a pound of dextrose to the jug and shake until dissolved.
+1. Pour into carboy, then add another jug until just below 1 gallon of juice.
+1. Measure original gravity.
+1. Add more dextrose until you hit desired original gravity.
+1. Add pectic acid and yeast nutrient, then shake until dissolved.
+1. Top off your gallon with the rest of the juice.
+1. Add half packet of yeast.
 
 [![Two carboys of Apfelwein](https://farm8.staticflickr.com/7346/11840427606_08eb5c3534_z.jpg)](https://secure.flickr.com/photos/sparticuz/11840427606/)
 
