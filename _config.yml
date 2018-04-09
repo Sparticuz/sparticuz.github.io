@@ -1,12 +1,20 @@
-name: Kyle McNally
-markdown: redcarpet
-pygments: true
+title: Kyle McNally
+encoding: UTF-8
+kramdown:
+  input: GFM
+  hard_wrap: false
+future: true
+jailed: false
+gfm_quirks: paragraph_end
 timezone: America/New_York
-lsi: true
 url: http://www.kmcnally.net
 author: Kyle McNally
 email: kyle@kmcnally.net
 permalink: pretty
-redcarpet:
- extensions: ['tables','autolink']plugins:
+github: [metadata]
+plugins:
   - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-avatar
+  - jemoji
+  - jekyll-mentions
