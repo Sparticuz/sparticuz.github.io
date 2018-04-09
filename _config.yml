@@ -9,3 +9,4 @@ email: kyle@kmcnally.net
 permalink: pretty
 redcarpet:
  extensions: ['tables','autolink']
+theme: jekyll-theme-cayman
