@@ -8,4 +8,5 @@ author: Kyle McNally
 email: kyle@kmcnally.net
 permalink: pretty
 redcarpet:
- extensions: ['tables','autolink']
+ extensions: ['tables','autolink']plugins:
+  - jekyll-feed
