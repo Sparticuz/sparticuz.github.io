@@ -49,5 +49,5 @@ I started with an Original Gravity of 1.042 for just the Apple Juice alone. Afte
 
 I'll be updating this post as time goes on because I'm planning on letting them age in their carboys for 4-6 months before I bottle them.
 
-[1]: http://www.homebrewtalk.com/f25/man-i-love-apfelwein-14860/
-[2]: http://www.whitehousefoods.com/Products/Apple-Juice/64oz-White-House-Premium-(Fresh-Pressed)-Juice.aspx
+[1]: https://www.homebrewtalk.com/f25/man-i-love-apfelwein-14860/
+[2]: https://www.whitehousefoods.com/Products/Apple-Juice/64oz-White-House-Premium-(Fresh-Pressed)-Juice.aspx

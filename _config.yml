@@ -7,7 +7,7 @@ future: true
 jailed: false
 gfm_quirks: paragraph_end
 timezone: America/New_York
-url: http://www.kmcnally.net
+url: https://www.kmcnally.net
 author: Kyle McNally
 email: kyle@kmcnally.net
 permalink: pretty

@@ -12,11 +12,11 @@ date: 2014-01-03
 Here is a list of recipies I've brewed. (Newest brew at the top)
 
 1. [EdWort's Apfelwein]({% post_url 2014-01-08-apfelwein %}) 3 Gallons - Brewed 01/08/2014
-1. [Chestnut Brown Ale](http://brooklynbrewshop.com/beer-making-kits/chestnut-brown-ale) - Brewed 12/29/2013, Secondary 01/02/2014
+1. [Chestnut Brown Ale](https://brooklynbrewshop.com/beer-making-kits/chestnut-brown-ale) - Brewed 12/29/2013, Secondary 01/02/2014
 1. Hard Apple Cider - Brewed 11/27/2013
-1. [Smashing Pumpkin](http://www.northernbrewer.com/shop/smashing-pumpkin-ale-all-grain-kit.html) - Brewed 11/16/2013
-1. [Smashing Pumpkin](http://www.northernbrewer.com/shop/smashing-pumpkin-ale-all-grain-kit.html) - Brewed 09/26/2013, [Pictures](https://secure.flickr.com/photos/sparticuz/tags/smashingpumpkinale)
-1. [Grapefruit Honey](http://brooklynbrewshop.com/1-gallon-beer-mixes/grapefruit-honey-ale-mix)  
+1. [Smashing Pumpkin](https://www.northernbrewer.com/shop/smashing-pumpkin-ale-all-grain-kit.html) - Brewed 11/16/2013
+1. [Smashing Pumpkin](https://www.northernbrewer.com/shop/smashing-pumpkin-ale-all-grain-kit.html) - Brewed 09/26/2013, [Pictures](https://secure.flickr.com/photos/sparticuz/tags/smashingpumpkinale)
+1. [Grapefruit Honey](https://brooklynbrewshop.com/1-gallon-beer-mixes/grapefruit-honey-ale-mix)  
    Some nice tones of grapefruit and honey. I had to let it condition in the bottle for a while, at least 4 weeks.
-1. [Summer Wheat](http://brooklynbrewshop.com/1-gallon-beer-mixes/summer-wheat-beer-mix)  
+1. [Summer Wheat](https://brooklynbrewshop.com/1-gallon-beer-mixes/summer-wheat-beer-mix)  
    My first brew. It was decent, tasted like beer!
