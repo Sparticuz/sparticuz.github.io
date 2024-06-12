@@ -1,0 +1,73 @@
+# yaml-language-server: $schema=https://json.schemastore.org/github-workflow.json
+
+name: Deploy Quartz site to Github Pages
+
+# Run when there is a push to this repo, or a workflow dispatch from my vault repo
+on:
+  push:
+    branches:
+      - master
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      # Check out this repo
+      - uses: actions/checkout@v4
+
+      # Setup node for this repo
+      - uses: actions/setup-node@v4
+        with:
+          node-version: lts
+
+      # Checkout Quartz, putting it in the `quartz` subdirectory
+      - uses: actions/checkout@v4
+        with:
+          repository: "jackyzha0/quartz"
+          ref: v4.2.3
+          path: quartz
+
+      # npm ci on Quartz
+      - name: Install Dependencies
+        working-directory: ./quartz
+        run: npm ci
+
+      # Checkout my Vault into quartz/content
+      # If it's a private repo, make sure to add the deploy key
+      - name: Checkout Obsidian repo
+        uses: actions/checkout@v4
+        with:
+          repository: ${{ secrets.VAULTREPO }}
+          path: quartz/content
+          ssh-key: ${{ secrets.NOTESPRIVATEKEY }}
+
+      # Copy my Quartz Config file
+      - name: Copy Quartz config and overrides
+        run: rsync -av overrides/ quartz
+
+      # Build the Quartz public folder
+      - name: Build Quartz
+        working-directory: ./quartz
+        run: npx quartz build
+
+      # Upload the Quartz public folder as an artifact
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: quartz/public
+
+  publish:
+    permissions:
+      pages: write
+      id-token: write
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      # Deploy the Quartz public folder artifact
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

@@ -1,14 +1,5 @@
 # sparticuz.github.io
 
-My personal site
+My personal site rendered using Quartz, with a backend of Obsidian
 
-### Dev Environment
- - https://help.github.com/articles/setting-up-your-github-pages-site-locally-with-jekyll/
- - To Install:
-   - `https://jekyllrb.com/docs/installation/ubuntu/`
- - To Update (Ruby Dependencies):
-   - `bundle update`
- - To Update (NPM Dependencies):
-   - `npm update`
- - To Run:
-   - `npm run build`
+See [here](https://www.kmcnally.net/Journal/2024/20240611---Publish-your-Obsidian-Vault-using-Quartz) for more information
