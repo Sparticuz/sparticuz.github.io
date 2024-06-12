@@ -18,8 +18,6 @@ jobs:
 
       # Setup node for this repo
       - uses: actions/setup-node@v4
-        with:
-          node-version: lts
 
       # Checkout Quartz, putting it in the `quartz` subdirectory
       - uses: actions/checkout@v4
