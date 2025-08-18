@@ -14,13 +14,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       # Check out this repo
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
 
       # Setup node for this repo
       - uses: actions/setup-node@v4
 
       # Checkout Quartz, putting it in the `quartz` subdirectory
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
         with:
           repository: "jackyzha0/quartz"
           ref: v4.2.4
@@ -34,7 +34,7 @@ jobs:
       # Checkout my Vault into quartz/content
       # If it's a private repo, make sure to add the deploy key
       - name: Checkout Obsidian repo
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
         with:
           repository: ${{ secrets.VAULTREPO }}
           path: quartz/content
