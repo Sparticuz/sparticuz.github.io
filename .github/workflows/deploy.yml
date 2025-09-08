@@ -17,7 +17,7 @@ jobs:
       - uses: actions/checkout@v5
 
       # Setup node for this repo
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@v5
 
       # Checkout Quartz, putting it in the `quartz` subdirectory
       - uses: actions/checkout@v5
