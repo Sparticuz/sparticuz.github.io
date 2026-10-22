@@ -14,35 +14,47 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       # Check out this repo
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
 
       # Setup node for this repo
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 24
 
       # Checkout Quartz, putting it in the `quartz` subdirectory
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
         with:
           repository: "jackyzha0/quartz"
-          ref: v4.2.3
+          ref: v5.0.0
           path: quartz
+
+      # Checkout my Vault into quartz/content
+      # If it's a private repo, make sure to add the deploy key
+      - name: Checkout Obsidian repo
+        uses: actions/checkout@v7
+        with:
+          repository: ${{ secrets.VAULTREPO }}
+          path: quartz/content
+          ssh-key: ${{ secrets.NOTESPRIVATEKEY }}
+
+      # Apply configuration and dependency locks before installing Quartz
+      - name: Copy Quartz config and overrides
+        run: rsync -av overrides/ quartz
 
       # npm ci on Quartz
       - name: Install Dependencies
         working-directory: ./quartz
         run: npm ci
 
-      # Checkout my Vault into quartz/content
-      # If it's a private repo, make sure to add the deploy key
-      - name: Checkout Obsidian repo
-        uses: actions/checkout@v4
-        with:
-          repository: ${{ secrets.VAULTREPO }}
-          path: quartz/content
-          ssh-key: ${{ secrets.NOTESPRIVATEKEY }}
+      - name: Restore Quartz plugins
+        working-directory: ./quartz
+        run: npx quartz plugin restore
 
-      # Copy my Quartz Config file
-      - name: Copy Quartz config and overrides
-        run: rsync -av overrides/ quartz
+      - name: Check Quartz upgrade regressions
+        working-directory: ./quartz
+        env:
+          TZ: America/New_York
+        run: node --test quartz-upgrade.test.mjs
 
       # Build the Quartz public folder
       - name: Build Quartz
@@ -51,7 +63,7 @@ jobs:
 
       # Upload the Quartz public folder as an artifact
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact@v5
         with:
           path: quartz/public
 
@@ -68,4 +80,4 @@ jobs:
       # Deploy the Quartz public folder artifact
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@v5
