@@ -43,28 +43,20 @@ plugins:
     enabled: true
     options:
       hidePropertiesView: true
-    order: 5
   - source: "@quartz-community/created-modified-date"
     enabled: true
     options:
       priority:
         - frontmatter
       defaultDateType: created
-    order: 10
   - source: "@quartz-community/syntax-highlighting"
     enabled: true
-    order: 20
   - source: "@quartz-community/obsidian-flavored-markdown"
     enabled: true
-    options:
-      enableInHtmlEmbed: false
-    order: 30
   - source: "@quartz-community/github-flavored-markdown"
     enabled: true
-    order: 40
   - source: "@quartz-community/table-of-contents"
     enabled: true
-    order: 50
     layout:
       position: right
       priority: 20
@@ -73,22 +65,16 @@ plugins:
     enabled: true
     options:
       markdownLinkResolution: shortest
-    order: 60
   - source: "@quartz-community/description"
     enabled: true
-    order: 70
   - source: "@quartz-community/latex"
     enabled: true
-    order: 80
   - source: "@quartz-community/explicit-publish"
     enabled: true
   - source: "@quartz-community/alias-redirects"
     enabled: true
   - source: "@quartz-community/content-index"
     enabled: true
-    options:
-      enableSiteMap: true
-      enableRSS: true
   - source: "@quartz-community/favicon"
     enabled: true
   - source: "@quartz-community/cname"
@@ -107,9 +93,6 @@ plugins:
       display: desktop-only
   - source: "@quartz-community/graph"
     enabled: true
-    layout:
-      position: right
-      priority: 10
   - source: "@quartz-community/search"
     enabled: true
     layout:
@@ -120,29 +103,14 @@ plugins:
         grow: true
   - source: "@quartz-community/backlinks"
     enabled: true
-    layout:
-      position: right
-      priority: 30
   - source: "@quartz-community/article-title"
     enabled: true
-    layout:
-      position: beforeBody
-      priority: 10
   - source: "@quartz-community/content-meta"
     enabled: true
-    layout:
-      position: beforeBody
-      priority: 20
   - source: "@quartz-community/tag-list"
     enabled: true
-    layout:
-      position: beforeBody
-      priority: 30
   - source: "@quartz-community/page-title"
     enabled: true
-    layout:
-      position: left
-      priority: 10
   - source: "@quartz-community/darkmode"
     enabled: true
     layout:

@@ -9,7 +9,7 @@ See [here](https://www.kmcnally.net/Journal/2024/20240611---Publish-your-Obsidia
 The deployment workflow pins Quartz 5 to reviewed upstream commit `97a2d05f80c4c50534959b1d0d41cc4b3895625e`, uses Node 24, and tracks GitHub Actions by major version. This revision is newer than the `v5.0.0` tag even though upstream still reports version 5.0.0.
 
 - Quartz's own `package.json` and `package-lock.json` are used unchanged. `npm ci` installs its stock npm plugins; no separate plugin restore or dependency overlays are needed.
-- `overrides/quartz.config.yaml` contains normal site configuration and npm plugin settings. The remaining overrides are site assets and regression checks, not Quartz source patches.
+- `overrides/quartz.config.yaml` contains normal site configuration and npm plugin settings, omitting redundant plugin options, ordering, and placement where runtime defaults preserve behavior. Quartz does not merge this file with its default YAML. The remaining overrides are site assets and regression checks, not Quartz source patches.
 - The standard frontmatter parser recognizes `created`, `updated`, and `publishDate`, replacing the custom date transformer. Dates still come only from frontmatter, with `created` used for display and feeds. Date-only YAML values use local midnight.
 - Quartz 5 generates lowercase URLs. The alias-redirects plugin preserves original mixed-case note URLs with redirect pages.
 
