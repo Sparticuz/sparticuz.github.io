@@ -49,6 +49,7 @@ jobs:
         working-directory: ./quartz
         run: npm ci
 
+
       # Build the Quartz public folder
       - name: Build Quartz
         working-directory: ./quartz
