@@ -7,15 +7,14 @@ import remarkRehype from "remark-rehype";
 import { resolveRelative, slugifyFilePath } from "@quartz-community/utils";
 import { VFile } from "vfile";
 import YAML from "yaml";
-import { NoteProperties } from "./.quartz/plugins/note-properties/dist/index.js";
-import { CreatedModifiedDate } from "./.quartz/plugins/created-modified-date/dist/index.js";
-import { CrawlLinks } from "./.quartz/plugins/crawl-links/dist/index.js";
+import { NoteProperties } from "@quartz-community/note-properties";
+import { CreatedModifiedDate } from "@quartz-community/created-modified-date";
+import { CrawlLinks } from "@quartz-community/crawl-links";
 
 const config = YAML.parse(await readFile("quartz.config.yaml", "utf8"));
 const options = (name) =>
-  config.plugins.find(
-    (plugin) => plugin.source === `github:quartz-community/${name}`,
-  ).options;
+  config.plugins.find((plugin) => plugin.source === `@quartz-community/${name}`)
+    .options;
 
 test("site YAML date fields survive frontmatter parsing", async () => {
   const ctx = { allSlugs: [], argv: { directory: "content" } };

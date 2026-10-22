@@ -12,6 +12,8 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
     steps:
       # Check out this repo
       - uses: actions/checkout@v7
@@ -25,7 +27,7 @@ jobs:
       - uses: actions/checkout@v7
         with:
           repository: "jackyzha0/quartz"
-          ref: v5.0.0
+          ref: 97a2d05f80c4c50534959b1d0d41cc4b3895625e # Quartz 5, reviewed upstream revision
           path: quartz
 
       # Checkout my Vault into quartz/content
@@ -36,8 +38,9 @@ jobs:
           repository: ${{ secrets.VAULTREPO }}
           path: quartz/content
           ssh-key: ${{ secrets.NOTESPRIVATEKEY }}
+          persist-credentials: false
 
-      # Apply configuration and dependency locks before installing Quartz
+      # Apply site configuration and assets; keep upstream dependency manifests
       - name: Copy Quartz config and overrides
         run: rsync -av overrides/ quartz
 
@@ -45,10 +48,6 @@ jobs:
       - name: Install Dependencies
         working-directory: ./quartz
         run: npm ci
-
-      - name: Restore Quartz plugins
-        working-directory: ./quartz
-        run: npx quartz plugin restore
 
       - name: Check Quartz upgrade regressions
         working-directory: ./quartz
