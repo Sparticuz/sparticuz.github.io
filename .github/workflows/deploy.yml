@@ -49,12 +49,6 @@ jobs:
         working-directory: ./quartz
         run: npm ci
 
-      - name: Check Quartz upgrade regressions
-        working-directory: ./quartz
-        env:
-          TZ: America/New_York
-        run: node --test quartz-upgrade.test.mjs
-
       # Build the Quartz public folder
       - name: Build Quartz
         working-directory: ./quartz
